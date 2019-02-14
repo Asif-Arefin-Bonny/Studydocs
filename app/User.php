@@ -27,4 +27,24 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function uploads ()
+    {
+        return $this->hasMany('App\Note');
+    }
+
+    public function noteRequests ()
+    {
+        return $this->hasMany('App\NoteRequest');
+    }
+
+    public function noteRequestComment ()
+    {
+        return $this->hasMany('App\NoteRequestComment');
+    }
+
+    public function noteComment ()
+    {
+        return $this->hasMany('App\Comment');
+    }
 }
