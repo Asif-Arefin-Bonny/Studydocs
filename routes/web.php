@@ -25,6 +25,8 @@ Route::get('/notes/{id}', 'NotesController@show')->name('show-note');
 Route::get('/note/download/{id}', 'DownloadNotesController@downloadNote')->name('download-note');
 Route::get('/note/upload', 'UploadNotesController@create')->name('create-note')->middleware('verified');
 Route::post('/note/upload', 'UploadNotesController@store')->name('create-note')->middleware('verified');
+Route::get('/note/edit/{id}', 'UploadNotesController@edit')->name('edit-note')->middleware('verified');
+Route::post('/note/edit', 'UploadNotesController@update')->name('edit-note')->middleware('verified');
 
 
 Route::get('/test', function () {

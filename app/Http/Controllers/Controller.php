@@ -21,7 +21,7 @@ class Controller extends BaseController
         $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);            
         $extension = $request->getClientOriginalExtension();
         $fileNameToStore = $filename.'_'.time().'.'.$extension;                       
-        $path = $request->storeAs('/uploads', $fileNameToStore);
+        $path = $request->storeAs('/public/uploads', $fileNameToStore);
 
         return '/storage/uploads/'.$fileNameToStore;
     }
@@ -29,13 +29,13 @@ class Controller extends BaseController
     public function download ($id)
     {
         $note = Note::find($id);
-        $path = exec('cd ../storage/app/ && pwd');
+        $path = exec('cd ../storage/app/public/ && pwd');
         $file = $path.str_replace("storage/","",$note->note);
         $name = basename($file);
         return response()->download($file, $name);
     }
 
-    public function update ($request, $previous)
+    public function updateNote ($request, $previous)
     {
         $path = exec('cd ../storage/app/public/  && pwd');
         $file_path = $path.str_replace("storage/","",$previous);
