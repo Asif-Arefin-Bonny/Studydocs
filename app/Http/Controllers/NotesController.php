@@ -9,7 +9,7 @@ class NotesController extends Controller
 {
     public function showAll ()
     {
-        $notes = Note::orderBy('created_at', 'DESC')->paginate(3);
+        $notes = Note::orderBy('created_at', 'DESC')->paginate(30);
 
         return view('notes.show-all', compact('notes'));
     }

@@ -65,6 +65,12 @@ class UploadNotesController extends Controller
     {
         $note = Note::find($id);
 
+        if ($note == null) {
+            flash('Note not found')->error();
+
+            return back();
+        }
+
         if ($note->user_id != auth()->user()->id) {
             flash('You are not authorized to make this edit')->error();
             
@@ -89,6 +95,12 @@ class UploadNotesController extends Controller
         if ($note == null) {
             flash('Note not found')->error();
 
+            return back();
+        }
+
+        if ($note->user_id != auth()->user()->id) {
+            flash('You are not authorized to make this edit')->error();
+            
             return back();
         }
 

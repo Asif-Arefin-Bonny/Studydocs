@@ -15,11 +15,23 @@
                         @endif
                     </div>
                     <div class="col-md-4">
-                        @foreach ($note->comments as $comment)
-                            <div class="row">
-                                <div class="col-md-12">{{ $comment->comment }}</div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                @foreach ($note->comments as $comment)
+                                    <div class="row">
+                                        <div class="col-md-12">{{ $comment->comment }}</div>
+                                    </div>
+                                @endforeach
                             </div>
-                        @endforeach
+                        </div>
+                        <form action="{{ route('note-comment', ['id' => $note->id]) }}" method="POST">
+                            @csrf
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input type="text" name="comment" class="form-control">
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
