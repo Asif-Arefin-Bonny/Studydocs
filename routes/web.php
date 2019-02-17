@@ -30,12 +30,8 @@ Route::post('/note/edit', 'UploadNotesController@update')->name('edit-note')->mi
 Route::post('/note/comment/{id}', 'CommentsController@noteComment')->name('note-comment')->middleware('verified');
 
 // Note Request Routes
-
-
-Route::get('/test', function () {
-    $note = App\Note::find(1);
-
-    return view('notes.create');
-});
-
-Route::get('/test/{id}', 'Controller@download');
+Route::get('/note-requests', 'NotesRequestController@showAll')->name('show-requests');
+Route::get('/note-requests/{id}', 'NotesRequestController@show')->name('show-request');
+Route::get('/note-request/create', 'NotesRequestController@create')->name('create-request')->middleware('verified');
+Route::post('/note-request/create', 'NotesRequestController@store')->name('create-request')->middleware('verified');
+Route::post('/note-requests/comment/{id}', 'CommentsController@requestComment')->name('request-comment')->middleware('verified');

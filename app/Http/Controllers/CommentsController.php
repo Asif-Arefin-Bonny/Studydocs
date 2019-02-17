@@ -44,7 +44,7 @@ class CommentsController extends Controller
         $note = NoteRequest::find($id);
 
         if ($note == null) {
-            flash('Note not found')->error();
+            flash('Note Request not found')->error();
 
             return back();
         }
