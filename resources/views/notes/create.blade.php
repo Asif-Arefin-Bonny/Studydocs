@@ -4,10 +4,10 @@
     <script>
         function checkType (active, passive) {
             console.log(active, passive);
-            document.getElementById('type-input-'+active).style.display = 'block';
-            document.getElementById('type-label-'+active).style.display = 'block';
-            document.getElementById('type-input-'+passive).style.display = 'none';
-            document.getElementById('type-label-'+passive).style.display = 'none';
+            document.getElementById('type-input-'+active).classList.remove('hidden');
+            document.getElementById('type-label-'+active).classList.remove('hidden');
+            document.getElementById('type-input-'+passive).classList.add('hidden');
+            document.getElementById('type-label-'+passive).classList.add('hidden');
         } 
     </script>
     <div class="container-fluid">
