@@ -16,7 +16,8 @@ class NoteRequestsTableSeeder extends Seeder
                 DB::table('note_requests')->insert([
                     'user_id' => rand(1, 30),
                     'category_id' => $cat->id,
-                    'description' => 'Some description'
+                    'description' => 'Some description',
+                    'name' => 'Some name'
                 ]);
             }
         }
