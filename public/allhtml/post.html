@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Studydocs - Platform to share and exchange study materials"
+    />
+    <meta name="author" content="Asif Arefin Bonny" />
+
+    <title>Studydocs</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand text-warning" href="index.html"
+          ><h3>Studydocs</h3>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html"
+                >Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="all.html">All Docs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="request.html">Doc Requests</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="post.html">Post</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Logout</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link disabled text-warning"
+                href="#"
+                tabindex="-1"
+                aria-disabled="true"
+                >User Name</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+      <!-- Jumbotron Header -->
+      <header class="jumbotron my-4 text-center">
+        <h1 class="display-4">
+          Post/Request Study Document
+        </h1>
+      </header>
+      <!-- Page Features -->
+      <div class="row text-left mt-4">
+        <div class="col-lg-12 col-md-12 mb-4">
+          <form>
+            <div class="form-group">
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Post Heading"
+              />
+            </div>
+            <div class="form-group">
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option>Share/Request</option>
+                <option>Share</option>
+                <option>Request</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option>Choose Subject</option>
+                <option>Web</option>
+                <option>Cloud</option>
+                <option>Data Structure</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <textarea
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                placeholder="Details"
+                rows="3"
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlFile1">Upload Doc</label>
+              <input
+                type="file"
+                class="form-control-file"
+                id="exampleFormControlFile1"
+              />
+            </div>
+            <button
+              class="btn btn-outline-warning my-2 my-sm-0 text-dark"
+              type="submit"
+            >
+              Post
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">
+          Copyright &copy;
+          <a href="http://www.juniv.edu/department/cse" target="_blank"
+            ><span class="text-warning">Studydocs - CSE,JU</span></a
+          >
+        </p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
