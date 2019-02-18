@@ -17,6 +17,7 @@ class NotesTableSeeder extends Seeder
             'description' => 'Some desctiption',
             'category_id' => 1,
             'type' => 1,
+            'name' => 'Some name'
         ]);
 
         DB::table('notes')->insert([
@@ -25,6 +26,7 @@ class NotesTableSeeder extends Seeder
             'description' => 'Some desctiption',
             'category_id' => 1,
             'type' => 1,
+            'name' => 'Some name'
         ]);
 
         DB::table('notes')->insert([
@@ -33,6 +35,7 @@ class NotesTableSeeder extends Seeder
             'description' => 'Some desctiption',
             'category_id' => 1,
             'type' => 1,
+            'name' => 'Some name'
         ]);
 
         DB::table('notes')->insert([
@@ -41,6 +44,7 @@ class NotesTableSeeder extends Seeder
             'description' => 'Some desctiption',
             'category_id' => 1,
             'type' => 1,
+            'name' => 'Some name'
         ]);
         
         DB::table('notes')->insert([
@@ -49,6 +53,7 @@ class NotesTableSeeder extends Seeder
             'description' => 'Some desctiption',
             'category_id' => 1,
             'type' => 1,
+            'name' => 'Some name'
         ]);
 
         DB::table('notes')->insert([
@@ -57,6 +62,7 @@ class NotesTableSeeder extends Seeder
             'description' => 'Some desctiption',
             'category_id' => 1,
             'type' => 1,
+            'name' => 'Some name'
         ]);
 
         DB::table('notes')->insert([
@@ -65,6 +71,7 @@ class NotesTableSeeder extends Seeder
             'description' => 'Some desctiption',
             'category_id' => 1,
             'type' => 1,
+            'name' => 'Some name'
         ]);
 
         DB::table('notes')->insert([
@@ -73,6 +80,7 @@ class NotesTableSeeder extends Seeder
             'description' => 'Some desctiption',
             'category_id' => 1,
             'type' => 1,
+            'name' => 'Some name'
         ]);
     }
 }
