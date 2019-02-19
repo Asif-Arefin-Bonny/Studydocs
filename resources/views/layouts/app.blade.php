@@ -52,10 +52,13 @@
               <span class="sr-only">(current)</span>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="request.html">Doc Requests</a>
+              <a class="nav-link" href="/note-requests">Doc Requests</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="post.html">Post</a>
+              <a class="nav-link" href="/note/upload">Add Doc</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/note-request/create">Add Doc Request</a>
             </li>
           </ul>
 
