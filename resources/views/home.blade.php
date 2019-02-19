@@ -5,7 +5,7 @@
 <div class="row text-center mt-4">
     <!-- TODO:: need to put the button and dropdown under one form and keep style same -->
     <div class="col-lg-6 col-md-6">
-      <div class="input-group ">http://127.0.0.1:8000/home
+      <div class="input-group ">`
         <select class="custom-select" id="inputGroupSelect01">
           <option selected>Choose Subject</option>
           <option value="1">Web</option>

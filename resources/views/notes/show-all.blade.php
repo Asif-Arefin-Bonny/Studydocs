@@ -1,27 +1,30 @@
 @extends('layouts.app')
-
 @section('content')
-    <div class="container-fluid">
-        @foreach ($notes as $note)
-            <div class="row">
-                <div class="col-md-3">
-                    {{ $note->name }}
-                </div>
-                <div class="col-md-4">
-                    {{ $note->description }}
-                </div>
-                <div class="col-md-2">
-                    {{ $note->category->name }}
-                </div>
-                <div class="col-md-3">
-                    <a href="{{ route('show-note', ['id' => $note->id]) }}">View Note</a>
-                </div>
-            </div>
-        @endforeach
-        <div class="row">
-            <div class="col-md-12">
-                {{ $notes->links() }}
-            </div>
+<div class="container">
+  <!-- Jumbotron Header -->
+  <header class="jumbotron my-4 text-center">
+    <h1 class="display-4">
+      Welcome to <span class="text-warning">StudyDocs</span>
+    </h1>
+    <p class="lead">
+      Post and find all your necessary study documents here.
+    </p>
+    <a href="/register" class="btn btn-primary btn-lg">Register Now</a>
+  </header>
+
+  <!-- Page Features -->
+  <div class="row text-center">
+    @foreach ($notes as $note)
+        @include('partials.card', [$note])
+    @endforeach
+    <div class="row">
+        <div class="col-md-12">
+            {{ $notes->links() }}
         </div>
     </div>
+    </div>
+  </div>
+  <!-- /.row -->
+</div>
+
 @endsection

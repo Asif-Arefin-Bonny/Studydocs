@@ -57,18 +57,6 @@
             <li class="nav-item">
               <a class="nav-link" href="post.html">Post</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Logout</a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link disabled text-warning"
-                href="#"
-                tabindex="-1"
-                aria-disabled="true"
-                >User Name</a
-              >
-            </li>
           </ul>
 
             <!-- Right Side Of Navbar -->
