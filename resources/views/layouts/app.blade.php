@@ -32,7 +32,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
 
-       <a class="navbar-brand" href="{{ url('/') }}">{{ config('app.name', 'Studydocs') }}
+       <a class="navbar-brand text-warning" href="{{ url('/') }}">{{ config('app.name', 'Studydocs') }}
         </a>
         <button
           class="navbar-toggler"
@@ -47,12 +47,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="/home">Docs Category</a>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="/home">Docs Category</a>
               <span class="sr-only">(current)</span>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/note-requests">Doc Requests</a>
+              <a class="nav-link text-light" href="/note-requests">Doc Requests</a>
             </li>
           </ul>
 
@@ -70,10 +70,10 @@
                     @endif
                 @else
                     <li class="nav-item">
-                      <a class="nav-link" href="/note/upload">Add Doc</a>
+                      <a class="nav-link text-info" href="/note/upload">Add Doc</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="/note-request/create">Add Doc Request</a>
+                      <a class="nav-link text-info" href="/note-request/create">Add Doc Request</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

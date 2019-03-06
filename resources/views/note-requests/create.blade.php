@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container-fluid">
+    <div class="container-fluid mb-5">
+        <h1 class="display-4 text-center my-5">Create a Request</h1>
         <form action="{{ route('create-request') }}" method="POST">
             @csrf
             <div class="row">
@@ -33,7 +34,7 @@
                             Note Description:
                         </div>
                         <div class="col-md-9">
-                            <textarea name="description" class="form-control" cols="30" rows="5"></textarea>
+                            <textarea name="description" class="form-control" cols="30" rows="8"></textarea>
                         </div>
                     </div>
                     <div class="row">

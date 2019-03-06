@@ -11,6 +11,7 @@
         } 
     </script>
     <div class="container-fluid">
+        <h1 class="text-center">Add Study Material</h1>
         <form action="{{ route('create-note') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="row">
@@ -67,7 +68,8 @@
                         </div>
                         <div class="col-md-9">
                             <input type="file" name="note" id="type-input-file" class="form-control">
-                            <textarea name="note_text" id="type-input-text" class="form-control hidden" cols="30" rows="5"></textarea>
+                            <br>
+                            <textarea name="note_text" id="type-input-text" class="form-control hidden" cols="30" rows="3"></textarea>
                         </div>
                     </div>
                     <div class="row mb-3">

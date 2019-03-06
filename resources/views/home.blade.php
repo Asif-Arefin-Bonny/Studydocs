@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <div class="container">
+<h1 class="display-4 text-center">All Study Materials</h1>
 <!-- Page Features -->
 <div class="row text-center mt-4">
     <!-- TODO:: need to put the button and dropdown under one form and keep style same -->

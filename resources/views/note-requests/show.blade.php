@@ -5,12 +5,12 @@
         <div class="row mb-3">
             <div class="col-md-12">
                 <h2 class="text-center">{{ $req->name }}</h2>
-                <p>{{ $req->description }}</p>
-                <div class="row">
+                <p class="my-5 font-weight-bold">{{ $req->description }}</p>
+                <div class="row my-5">
                     <div class="col-md-6">
                         Category: {{ $req->category->name }}
                     </div>
-                    <div class="col-md-6 text-right">
+                    <div class="col-md-6 text-right font-weight-bold">
                         Requested By: {{ $req->user->name }}
                     </div>
                 </div>
@@ -22,15 +22,15 @@
             @else
             <form action="{{ route('request-comment', ['id' => $req->id]) }}" method="POST">
                 @csrf
-                <input type="text" name="comment" class="form-control" placeholder="write a comment here.."><br>
-                <button type="submit" class="btn btn-outline-warning">Save</button>
+                <input type="text" name="comment" class="form-control mb-2" placeholder="write a comment here..">
+                <button type="submit" class="btn btn-outline-warning text-dark">Save</button>
             </form>
             @endguest
-                <h5 class="text-center">Comments</h5>
+                <h4 class="text-left pt-5">Comments</h4>
                 @foreach ($req->comments as $comment)
                     <div class="row">
                         <div class="col-md-12">
-                        {{ $comment->user->name }}: {{ $comment->comment }}, {{ $comment->created_at->diffForHumans() }}
+                        <h6>{{ $comment->user->name }}: {{ $comment->comment }}, {{ $comment->created_at->diffForHumans() }}</h6>
                         </div>
                     </div>
                 @endforeach

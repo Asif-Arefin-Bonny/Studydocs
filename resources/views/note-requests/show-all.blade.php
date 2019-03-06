@@ -2,9 +2,10 @@
 
 @section('content')
     <div class="container-fluid">
+        <h1 class="display-4 text-center">All Requests</h1>
         @foreach ($requests as $request)
-            <div class="border my-4">
-                <div class="row">
+            <div class="border rounded my-4">
+                <div class="row m-3">
                     <div class="col-md-3">
                         {{ $request->name }}
                     </div>
