@@ -19,12 +19,16 @@ class NotesController extends Controller
     {
         $categories = Category::all();
         if(isset($request->category)){
-            $category = Category::find($request->category);
+            if($request->category == 'All'){
+                $notes = Note::all();
+            }else{
+                $category = Category::find($request->category);
+                $notes = $category->notes()->paginate(30);
+            }
         }else{
-            $category = Category::find(1);
+            $notes = Note::all();
         }   
         
-        $notes = $category->notes()->paginate(30);
 
         return view('home', compact('notes', 'categories'));
     }

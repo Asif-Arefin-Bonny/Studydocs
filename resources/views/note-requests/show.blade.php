@@ -18,19 +18,24 @@
         </div>
         <div class="row mb-3">
             <div class="col-md-12">
+            @guest
+            @else
+            <form action="{{ route('request-comment', ['id' => $req->id]) }}" method="POST">
+                @csrf
+                <input type="text" name="comment" class="form-control" placeholder="write a comment here.."><br>
+                <button type="submit" class="btn btn-outline-warning">Save</button>
+            </form>
+            @endguest
                 <h5 class="text-center">Comments</h5>
                 @foreach ($req->comments as $comment)
                     <div class="row">
                         <div class="col-md-12">
-                            {{ $comment->comment }}
+                        {{ $comment->user->name }}: {{ $comment->comment }}, {{ $comment->created_at->diffForHumans() }}
                         </div>
                     </div>
                 @endforeach
             </div>
         </div>
     </div>
-    <form action="{{ route('request-comment', ['id' => $req->id]) }}" method="POST">
-        @csrf
-        <input type="text" name="comment" class="form-control">
-    </form>
+    
 @endsection

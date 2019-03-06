@@ -13,7 +13,7 @@ class NoteRequest extends Model
 
     public function comments ()
     {
-        return $this->hasMany('App\NoteRequestComment', 'note_id');
+        return $this->hasMany('App\NoteRequestComment', 'note_id')->orderBy('created_at', 'DESC');
     }
 
     public function category ()

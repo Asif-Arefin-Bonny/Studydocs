@@ -40,17 +40,19 @@
         </div>
       </div>
       <div class="row text-left mt-4">
-        <div class="col-lg-10 col-md-10">
+       @guest
+       @else
+       <div class="col-lg-10 col-md-10">
         <form action="{{ route('note-comment', ['id' => $note->id]) }}" method="POST">
           @csrf
           <div class="form-group">
-            <textarea
+            <input
               name="comment"
               class="form-control"
               id="exampleFormControlTextarea1"
               rows="1"
-              placeholder="Comment here"
-            ></textarea>
+              type="text"
+              placeholder="Please add a comment here">
           </div>
         </div>
         <div class="col-lg-2 col-md-2">
@@ -62,6 +64,7 @@
           </button>
           </form>
         </div>
+       @endguest
         <div class="col-lg-12 col-md-12 mb-4 mx-4">
           <ul class="list-unstyled">
             @foreach ($note->comments as $comment)
@@ -70,7 +73,7 @@
               </div>
               <li class="media my-4">
                 <div class="media-body">
-                  <h6 class="mt-0 mb-1">{{ $comment->comment }}</h6>
+                  <h6 class="mt-0 mb-1">{{ $comment->user->name }}: {{ $comment->comment }},  {{ $comment->updated_at->diffForHumans() }}</h6>
                 </div>
               </li>
             @endforeach

@@ -9,6 +9,7 @@
         <form method="GET" action="/home">
         <label>Choose Subject</label>
         <select class="custom-select" name='category' onchange='this.form.submit()'>
+        <option>All</option>
             @foreach($categories as $category)
               <option value="{{$category->id}}"  @if($category->id == Request::get('category')) selected  @endif >{{$category->name}}</option>
             @endforeach
