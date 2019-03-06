@@ -13,7 +13,7 @@ class CommentsController extends Controller
     public function noteComment (Request $request, $id)
     {
         $this->validate($request, [
-            'comment' => 'required|max:10'
+            'comment' => 'required|max:10000'
         ]);
 
         $note = Note::find($id);
@@ -38,7 +38,7 @@ class CommentsController extends Controller
     public function requestComment (Request $request, $id)
     {
         $this->validate($request, [
-            'comment' => 'required|max:10'
+            'comment' => 'required|max:10000'
         ]);
 
         $note = NoteRequest::find($id);

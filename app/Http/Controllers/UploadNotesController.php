@@ -17,8 +17,8 @@ class UploadNotesController extends Controller
     public function store (Request $request)
     {
         $this->validate($request, [
-            'name' => 'required|max:80',
-            'description' => 'required|max:200',
+            'name' => 'required|max:180',
+            'description' => 'required|max:2000',
             'type' => 'required',
             'category' => 'required',
         ]);
@@ -84,8 +84,8 @@ class UploadNotesController extends Controller
     {
         $this->validate($request, [
             'id' => 'required',
-            'name' => 'required|max:80',
-            'description' => 'required|max:200',
+            'name' => 'required|max:180',
+            'description' => 'required|max:2000',
             'type' => 'required',
             'category' => 'required',
         ]);
