@@ -6,6 +6,7 @@
             <p class="card-text">{{ $note->description }}
             </p>
             <small>{{ $note->category->name }}</small>
+            <br>
             <a href="{{ route('show-note', ['id' => $note->id]) }}" class="card-link">Details>></a>
         </div>
       </div>
