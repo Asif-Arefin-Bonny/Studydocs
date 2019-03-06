@@ -5,34 +5,23 @@
 <div class="row text-center mt-4">
     <!-- TODO:: need to put the button and dropdown under one form and keep style same -->
     <div class="col-lg-6 col-md-6">
-      <div class="input-group ">`
-        <select class="custom-select" id="inputGroupSelect01">
-          <option selected>Choose Subject</option>
-          <option value="1">Web</option>
-          <option value="2">Cloud</option>
-          <option value="3">Data Structure</option>
-        </select>
+      <div class="input-group ">
+        <form method="GET" action="/home">
+        <label>Choose Subject</label>
+        <select class="custom-select" name='category' onchange='this.form.submit()'>
+            @foreach($categories as $category)
+              <option value="{{$category->id}}"  @if($category->id == Request::get('category')) selected  @endif >{{$category->name}}</option>
+            @endforeach
+          </select>
+        <noscript><input type="submit" value="Submit"></noscript>
+        </form>
       </div>
-    </div>
-    <div class="col-lg-6 col-md-6">
-      <form class="form-inline">
-        <input
-          class="form-control mr-sm-2"
-          type="search"
-          placeholder="Search Docs"
-          aria-label="Search"
-        />
-        <button
-          class="btn btn-outline-warning my-2 my-sm-0 text-dark"
-          type="submit"
-        >
-          Search
-        </button>
-      </form>
     </div>
   </div>
   <div class="row text-center mt-4">
-    @include('partials.card')
+      @foreach ($notes as $note)
+        @include('partials.card', [$note])
+      @endforeach
   </div>
       <!-- /.row -->
 </div>

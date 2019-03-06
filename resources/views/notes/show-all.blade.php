@@ -9,7 +9,13 @@
     <p class="lead">
       Post and find all your necessary study documents here.
     </p>
+
+  @guest
     <a href="/register" class="btn btn-primary btn-lg">Register Now</a>
+  @else
+    <a href="/home" class="btn btn-primary btn-lg">Home</a>
+  @endguest
+
   </header>
 
   <!-- Page Features -->

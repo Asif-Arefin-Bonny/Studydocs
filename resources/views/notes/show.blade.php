@@ -9,23 +9,8 @@
                     <div class="col-md-8">
                     </div>
                     <div class="col-md-4">
-                        <div class="row">
-                            <div class="col-md-12">
-                                @foreach ($note->comments as $comment)
-                                    <div class="row">
-                                        <div class="col-md-12">{{ $comment->comment }}</div>
-                                    </div>
-                                @endforeach
-                            </div>
-                        </div>
-                        <form action="{{ route('note-comment', ['id' => $note->id]) }}" method="POST">
-                            @csrf
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <input type="text" name="comment" class="form-control">
-                                </div>
-                            </div>
-                        </form>
+                      
+                        
                     </div>
                 </div>
             </div>
@@ -56,8 +41,11 @@
       </div>
       <div class="row text-left mt-4">
         <div class="col-lg-10 col-md-10">
+        <form action="{{ route('note-comment', ['id' => $note->id]) }}" method="POST">
+          @csrf
           <div class="form-group">
             <textarea
+              name="comment"
               class="form-control"
               id="exampleFormControlTextarea1"
               rows="1"
@@ -72,24 +60,20 @@
           >
             Post
           </button>
+          </form>
         </div>
         <div class="col-lg-12 col-md-12 mb-4 mx-4">
           <ul class="list-unstyled">
-            <li class="media">
-              <div class="media-body">
-                <h6 class="mt-0 mb-1">Comment 1</h6>
+            @foreach ($note->comments as $comment)
+              <div class="row">
+                  <div class="col-md-12"></div>
               </div>
-            </li>
-            <li class="media my-4">
-              <div class="media-body">
-                <h6 class="mt-0 mb-1">Comment 2</h6>
-              </div>
-            </li>
-            <li class="media">
-              <div class="media-body">
-                <h6 class="mt-0 mb-1">Comment 3</h6>
-              </div>
-            </li>
+              <li class="media my-4">
+                <div class="media-body">
+                  <h6 class="mt-0 mb-1">{{ $comment->comment }}</h6>
+                </div>
+              </li>
+            @endforeach
           </ul>
         </div>
       </div>
